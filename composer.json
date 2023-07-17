@@ -1,0 +1,30 @@
+{
+    "require": {
+        "php": ">=8.1",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.7",
+        "fig/http-message-util": "^1.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+
+    "autoload": {
+        "psr-4": {
+            "VcvApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VcvApi\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.6",
+        "slevomat/coding-standard": "^8.13"
+    }
+}
