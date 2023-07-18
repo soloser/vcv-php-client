@@ -58,9 +58,9 @@ $request = (new ApiRequestBuilder())
 $response = $comments->list($request);
 
 foreach ($response['_embedded']['comments'] as $comment) {
-$comment['message'] = $comment['message'] . ' [UPDATED]';
-//update response comment message
-$comments->update($comment['id'], $comment);
+    $comment['message'] = $comment['message'] . ' [UPDATED]';
+    //update response comment message
+    $comments->update($comment['id'], $comment);
 }
 ```
 
