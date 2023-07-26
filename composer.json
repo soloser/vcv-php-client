@@ -1,7 +1,7 @@
 {
     "name": "soloser/vcv-php-client",
     "description": "VCV api v3 client for PHP",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Sergei Solovev",
