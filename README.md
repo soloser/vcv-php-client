@@ -1,7 +1,7 @@
 # vcv-php-client
 
 ## Installation
-> **Requires [PHP 8.1+](https://php.net/releases/)**
+> **Requires [PHP 8.0+](https://php.net/releases/)**
 
 To get started, simply require the project using [Composer](https://getcomposer.org).
 ## Examples

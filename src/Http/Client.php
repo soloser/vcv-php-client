@@ -23,7 +23,7 @@ class Client
      * Vcv client constructor.
      * @param GuzzleClient $guzzle
      */
-    public function __construct(private readonly GuzzleClient $guzzle)
+    public function __construct(private GuzzleClient $guzzle)
     {
 
     }

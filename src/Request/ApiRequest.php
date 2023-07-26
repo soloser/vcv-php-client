@@ -10,7 +10,7 @@ class ApiRequest implements ApiRequestInterface
     /**
      * @param array $queryParams
      */
-    public function __construct(private readonly array $queryParams = [])
+    public function __construct(private array $queryParams = [])
     {
 
     }

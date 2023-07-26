@@ -7,6 +7,7 @@ namespace VcvApi\Tests\Resources;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
+use TypeError;
 use VcvApi\Http\Client;
 use VcvApi\Resources\Recruiter\Vacancies;
 
@@ -52,7 +53,7 @@ class VacanciesTest extends TestCase
     public function testArchiveIncorrectIds(): void
     {
         $ids = ['ids' => [123, 456]];
-        $this->expectException(\TypeError::class);
+        $this->expectException(TypeError::class);
         $this->resource->archiveList($ids);
     }
 
@@ -79,7 +80,7 @@ class VacanciesTest extends TestCase
     public function testRestoreIncorrectIds(): void
     {
         $ids = ['some' => 'field'];
-        $this->expectException(\TypeError::class);
+        $this->expectException(TypeError::class);
         $this->resource->restoreList($ids);
     }
 
@@ -107,7 +108,7 @@ class VacanciesTest extends TestCase
     public function testDeleteIncorrectIds(): void
     {
         $ids = ['some' => 'field'];
-        $this->expectException(\TypeError::class);
+        $this->expectException(TypeError::class);
         $this->resource->deleteList($ids);
     }
 }

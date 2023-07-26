@@ -11,6 +11,8 @@ use VcvApi\Resources\Traits\ListTrait;
 use VcvApi\Resources\Traits\UpdateTrait;
 use VcvApi\Resources\AbstractResource;
 
+use function array_map;
+
 class Vacancies extends AbstractResource
 {
     use ListTrait, DetailTrait, CreateTrait, UpdateTrait, DeleteTrait;
@@ -18,7 +20,7 @@ class Vacancies extends AbstractResource
     public function archiveList(array $ids): array
     {
         return $this->getClient()->patch($this->resourceName(), [
-            'vacancies' => \array_map(function (int $id): array {
+            'vacancies' => array_map(function (int $id): array {
                 return [
                     'id' => $id,
                     'active' => false,
@@ -30,7 +32,7 @@ class Vacancies extends AbstractResource
     public function deleteList(array $ids): array
     {
         return $this->getClient()->delete($this->resourceName(), [], [
-            'vacancies' => \array_map(function (int $id): array {
+            'vacancies' => array_map(function (int $id): array {
                 return [
                     'id' => $id,
                 ];
@@ -41,7 +43,7 @@ class Vacancies extends AbstractResource
     public function restoreList(array $ids): array
     {
         return $this->getClient()->patch($this->resourceName(), [
-            'vacancies' => \array_map(function (int $id): array {
+            'vacancies' => array_map(function (int $id): array {
                 return [
                     'id' => $id,
                     'active' => true,
